@@ -15,13 +15,13 @@
             <span class="input-group-btn">
               <button type="button" class="btn btn-info"><i class="fa fa-user"></i></button>
             </span>
-            <input v-model="account.username" class="form-control" placeholder="Username" required="">
+            <input v-model="account.username" class="form-control" tabindex="1" placeholder="用户名" required="">
           </div>
           <div class="input-group m-b">
             <span class="input-group-btn">
               <button type="button" class="btn btn-info"><i class="fa fa-lock"></i></button>
             </span>
-            <input type="password" @focus="nosee = true" @blur="nosee = false" id="password" v-model="account.password" class="form-control" placeholder="Password" required="">
+            <input type="password" @focus="nosee = true" @blur="nosee = false" tabindex="2" id="password" v-model="account.userpwd" class="form-control" placeholder="密码" required="">
           </div>
           <div>
             <div class="checkbox clip-check check-success">
@@ -54,13 +54,13 @@
         nosee: false,
         account: {
           username: 'admin',
-          password: '123456'
+          userpwd: '123456'
         }
       };
     },
     mounted: function () {
       this.$nextTick(function () {
-        $('body').height('auto');
+
       })
     },
     methods: {
@@ -68,10 +68,10 @@
         this.$http.post('/api/login', this.account)
           .then(response => {
             let {code, message, result} = response.data;
-            if (code === 0) {
+            if (code === 1) {
               this.$store.commit('login', result);
               this.$router.replace({
-                path: decodeURIComponent(this.$route.query.redirect || '/')
+                path: decodeURIComponent(this.$route.query.redirect || '/manage')
               })
             } else {
               this.$message.info({
@@ -196,9 +196,8 @@
     text-align: right;
   }
 
-  #login .login {
-    height: 200px;
-    margin-top: 100px;
+  .login {
+    padding-top: 10%;
   }
 
   #login #owl-login {

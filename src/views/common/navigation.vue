@@ -36,7 +36,7 @@
 <script>
   import axios from 'axios';
   import {mapGetters} from 'vuex'
-  import 'metisMenu/dist/metisMenu.min.js'
+  /*import 'metisMenu/dist/metisMenu.min.js'*/
   import menu from '../../components/menuComp'
 
   export default {
@@ -48,7 +48,7 @@
     },
     computed: {
       username() {
-        return this.loginUser ? this.loginUser.username : ''
+        return this.loginUser ? this.loginUser.userName : ''
       },
       ...mapGetters([
         'loginUser'

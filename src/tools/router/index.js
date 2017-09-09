@@ -1,4 +1,4 @@
-import Vue from 'vue'
+/*import Vue from 'vue'*/
 import Router from 'vue-router'
 
 /*引用页面模板- 供路由使用*/
@@ -14,10 +14,22 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      name: 'main',
+      name: 'landing',
+      component: resolve => require(['@/views/landing'], resolve),
+      meta: {requireAuth: false},
+    },
+    {
+      path: '/manage',
+      name: '首页',
       component: resolve => require(['@/views/index'], resolve),
       meta: {requireAuth: true},
       children: [
+        {
+          path: 'main',
+          name: '状态',
+          component: resolve => require(['@/views/main'], resolve),
+          meta: {requireAuth: true}
+        },
         {
           path: '/hello',
           name: 'Hello',
@@ -44,7 +56,7 @@ let router = new Router({
         },
         {
           path: '/user',
-          name: 'user',
+          name: '用户管理',
           component: resolve => require(['@/views/user'], resolve),
           meta: {requireAuth: true}
         }
@@ -55,13 +67,6 @@ let router = new Router({
       name: 'login',
       component:
         resolve => require(['@/views/login'], resolve)
-    }
-    ,
-    {
-      path: '/login_el',
-      name: 'login_el',
-      component:
-        resolve => require(['@/views/login_el'], resolve)
     }
     ,
     {

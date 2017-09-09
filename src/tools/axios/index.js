@@ -1,4 +1,4 @@
-import axios from 'axios';
+/*import axios from 'axios';*/
 import router from '../router'
 import {Message} from 'element-ui';
 import {Notification} from 'element-ui';
@@ -30,7 +30,7 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(function (response) {
   // token 已过期，重定向到登录页面
   let code = response.data.code;
-  if (1130 === code || 1002 === code || 1131 === code) {
+  if (1130 === code) {
     Notification.info({
       message: response.data.message
     });
@@ -38,8 +38,11 @@ axios.interceptors.response.use(function (response) {
       path: '/login',
       query: {redirect: router.currentRoute.fullPath}
     })
+    //返回reject阻拦本次请求，会报错，但是没办法
+    return Promise.reject(response.data.message)
+  } else {
+    return response
   }
-  return response
 }, error => {
   if (error.response) {
     let message = error.response.data.message;

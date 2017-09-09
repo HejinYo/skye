@@ -10,11 +10,58 @@
       <!-- Page topnavbar -->
       <top-navbar></top-navbar>
 
-      <!-- Main view  -->
-      <router-view></router-view>
+      <!--<el-col :span="24" class="breadcrumb-container">
+        <strong class="title">{{$route.name}}</strong>
+        <el-breadcrumb separator="/" class="breadcrumb-inner">
+          <el-breadcrumb-item v-for="item in $route.matched" :key="item.path">
+            {{ item.name }}
+          </el-breadcrumb-item>
+        </el-breadcrumb>
+      </el-col>-->
+
+      <!--<div class="row border-bottom white-bg">
+        <div class="col-lg-6">
+          <h2><strong class="title">{{$route.name}}</strong></h2>
+        </div>
+        <div class="col-lg-6" style="float: right">
+          &lt;!&ndash;<el-breadcrumb separator="/">
+            <el-breadcrumb-item v-for="item in $route.matched" :key="item.path" :to="{ path: item.path }">
+              {{ item.name }}
+            </el-breadcrumb-item>
+          </el-breadcrumb>&ndash;&gt;
+          <ol class="breadcrumb">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a>Tables</a>
+            </li>
+            <li class="active">
+              <strong>Data Tables</strong>
+            </li>
+          </ol>
+        </div>
+      </div>-->
+      <div class="white-bg">
+        <div class="content-header">
+          <h1>
+            {{$route.name}}
+          </h1>
+          <el-breadcrumb separator="/" class="breadcrumb">
+            <el-breadcrumb-item v-for="item in $route.matched" :key="item.path">
+              {{ item.name }}
+            </el-breadcrumb-item>
+          </el-breadcrumb>
+        </div>
+      </div>
+
+      <div class="wrapper wrapper-content animated fadeInRight">
+        <!-- Main view  -->
+        <router-view></router-view>
+      </div>
 
       <!-- Footer -->
-      <!--<footer-comp></footer-comp>-->
+      <footer-comp></footer-comp>
     </div>
     <right-sidebar></right-sidebar>
     <skin-config></skin-config>
@@ -48,6 +95,9 @@
     methods: {},
     mounted: function () {
       this.$nextTick(function () {
+        this.$router.replace({
+          path: decodeURIComponent('/manage/main')
+        })
       })
     }
     ,
@@ -76,8 +126,43 @@
 
 </script>
 
+<style lang="scss">
 
-<style scoped="">
-  /*@import '../assets/css/style.css';
-  @import '../assets/css/animate.css';*/
+  .content-header {
+    position: relative;
+    padding: 10px 15px 10px 15px;
+  }
+
+  .content-header > h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .content-header > .breadcrumb {
+    float: right;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    padding: 7px 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 991px) {
+    .content-header > .breadcrumb {
+      position: relative;
+      margin-top: 5px;
+      top: 0;
+      right: 0;
+      float: none;
+      background: #f2f2f3;
+      /*padding-left: 10px;*/
+    }
+    .content-header > .breadcrumb li:before {
+      color: #97a0b3;
+    }
+  }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
     <div class="pull-right">
-      HejinYo.
+      HejinYo
     </div>
     <div>
-      <strong>Copyright</strong> Example Company &copy; 2014-2017
+      <strong>Copyright</strong> 2014-2017
     </div>
   </div>
 </template>

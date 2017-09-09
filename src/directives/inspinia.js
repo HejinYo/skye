@@ -36,9 +36,9 @@ function initFirst() {
   // 窗口大小变化动态添加样式 Minimalize menu when screen is less than 768px
   $(window).bind("resize", function () {
     if ($(this).width() < 769) {
-      $('body').addClass('body-small').removeClass('fixed-sidebar')
+      $('body').addClass('body-small')/*.removeClass('fixed-sidebar')*/
     } else {
-      $('body').removeClass('body-small').addClass('fixed-sidebar')
+      $('body').removeClass('body-small')/*.addClass('fixed-sidebar')*/
     }
     fix_height();
   });

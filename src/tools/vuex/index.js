@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+/*import Vue from 'vue'*/
+/*import Vuex from 'vuex'*/
 import * as actions from './actions'
 import * as getters from './getters'
 
-Vue.use(Vuex)
+// 用于使用script标签加载window.Vuex，Vuex会被自动安装，无需手动安装
+// Vue.use(Vuex)
 
 // 定义数据源，应用初始状态，不能直接改变 store 中的状态
 const state = {
@@ -14,8 +15,8 @@ const state = {
 // 定义所需的 mutations，用来改变状态的值
 const mutations = {
   login(state, data) {
-    state.loginUser = data.loginUser;
-    sessionStorage.loginUser = JSON.stringify(data.loginUser);
+    state.loginUser = data;
+    sessionStorage.loginUser = JSON.stringify(data);
     sessionStorage.userToken = data.userToken;
   },
   logout(state) {

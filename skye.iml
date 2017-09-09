@@ -4,5 +4,22 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="axios" level="application" />
+    <orderEntry type="library" name="index" level="application" />
+    <orderEntry type="library" name="vue" level="application" />
+    <orderEntry type="library" name="vue-router" level="application" />
+    <orderEntry type="library" name="vuex" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="metisMenu" level="application" />
+    <orderEntry type="library" name="jquery.slimscroll" level="application" />
+    <orderEntry type="library" name="pace" level="application" />
+    <orderEntry type="library" name="zh_CN" level="application" />
+    <orderEntry type="library" name="vee-validate" level="application" />
+    <orderEntry type="library" name="toastr" level="application" />
+    <orderEntry type="library" name="layer" level="application" />
+    <orderEntry type="library" name="iview" level="application" />
+    <orderEntry type="library" name="wow" level="application" />
+    <orderEntry type="library" name="classie" level="application" />
   </component>
 </module>

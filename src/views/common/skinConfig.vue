@@ -48,23 +48,23 @@
             </div>
           </div>
         </div>
-        <div class="setings-item">
-                    <span>
-                      固定顶栏 v.2
-                      <br/>
-                      <small>*Primary layout</small>
-                    </span>
-          <div class="switch">
-            <div class="onoffswitch">
-              <input type="checkbox" name="fixednavbar2" class="onoffswitch-checkbox" id="fixednavbar2" @click="fixednavbar2">
-              <label class="onoffswitch-label" for="fixednavbar2">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="setings-item">
+        <!-- <div class="setings-item">
+                     <span>
+                       固定顶栏 v.2
+                       <br/>
+                       <small>*Primary layout</small>
+                     </span>
+           <div class="switch">
+             <div class="onoffswitch">
+               <input type="checkbox" name="fixednavbar2" class="onoffswitch-checkbox" id="fixednavbar2" @click="fixednavbar2">
+               <label class="onoffswitch-label" for="fixednavbar2">
+                 <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+               </label>
+             </div>
+           </div>
+         </div>-->
+        <!--<div class="setings-item">
                     <span>
                       盒式布局
                     </span>
@@ -77,7 +77,7 @@
               </label>
             </div>
           </div>
-        </div>
+        </div>-->
         <div class="setings-item">
                     <span>
                       固定页脚
@@ -93,39 +93,39 @@
           </div>
         </div>
 
-        <div class="title">Skins</div>
+        <div class="title">皮肤设置</div>
         <div class="setings-item default-skin">
            <span class="skin-name ">
              <a href="#" class="s-skin-0" @click.prevent="skin_default">
-               默认皮肤
+               深沉黑
              </a>
            </span>
         </div>
-        <div class="setings-item blue-skin">
-           <span class="skin-name ">
-             <a href="#" class="s-skin-1" @click.prevent="skin_blue">
-               浅蓝皮肤
-             </a>
-           </span>
-        </div>
-        <div class="setings-item blue-skin">
-           <span class="skin-name ">
-             <a href="#" class="s-skin-1" @click.prevent="skin_dark_blue">
-               深蓝皮肤
-             </a>
-           </span>
-        </div>
-        <div class="setings-item yellow-skin">
-           <span class="skin-name ">
-             <a href="#" class="s-skin-3" @click.prevent="skin_yellow">
-               黄色/紫色
-             </a>
-           </span>
-        </div>
+        <!--  <div class="setings-item blue-skin">
+             <span class="skin-name ">
+               <a href="#" class="s-skin-1" @click.prevent="skin_blue">
+                 浅蓝皮肤
+               </a>
+             </span>
+          </div>
+          <div class="setings-item blue-skin">
+             <span class="skin-name ">
+               <a href="#" class="s-skin-1" @click.prevent="skin_dark_blue">
+                 深蓝皮肤
+               </a>
+             </span>
+          </div>
+          <div class="setings-item yellow-skin">
+             <span class="skin-name ">
+               <a href="#" class="s-skin-3" @click.prevent="skin_yellow">
+                 黄色/紫色
+               </a>
+             </span>
+          </div>-->
         <div class="setings-item ultra-skin">
            <span class="skin-name ">
              <a href="#" class="md-skin" @click.prevent="skin_md">
-               Material Design
+               原谅绿
              </a>
            </span>
         </div>
@@ -316,3 +316,10 @@
   }
 
 </script>
+
+<style scoped lang="scss">
+  $url: '../..//assets/css/patterns/';
+  @import '../../assets/css/scss/variables';
+  @import '../../assets/css/scss/theme-config';
+
+</style>
