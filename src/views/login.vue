@@ -74,9 +74,7 @@
                 path: decodeURIComponent(this.$route.query.redirect || '/manage')
               })
             } else {
-              this.$message.info({
-                message: message
-              });
+              this.$Message.info(message);
             }
           })
       }

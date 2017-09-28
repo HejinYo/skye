@@ -21,5 +21,6 @@
     <orderEntry type="library" name="iview" level="application" />
     <orderEntry type="library" name="wow" level="application" />
     <orderEntry type="library" name="classie" level="application" />
+    <orderEntry type="library" name="cropper" level="application" />
   </component>
 </module>

@@ -48,7 +48,8 @@
   position: fixed;
   top: 60px;
   width: 260px !important;
-  z-index: 1009;
+  /*z-index: 1009;*/
+  z-index: 10;
   bottom: 0;
   right: -260px;
 }

@@ -118,11 +118,13 @@ video {
 }
 
 .note-editor.fullscreen {
-  z-index: 2050;
+  /*z-index: 2050;*/
+  z-index: 20;
 }
 
 .note-editor.note-frame.fullscreen {
-  z-index: 2020;
+  /*z-index: 2020;*/
+  z-index: 20;
 }
 
 .note-editor.note-frame .note-editing-area .note-editable {
@@ -150,7 +152,8 @@ video {
 }
 
 .modal-dialog {
-  z-index: 2200;
+  /*z-index: 2200;*/
+  z-index: 22;
 }
 
 .modal-body {
@@ -253,7 +256,8 @@ ul.unstyled, ol.unstyled {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  /*z-index: 1000;*/
+  z-index: 10;
   padding: 10px 20px;
   background: white;
   border-top: 1px solid $border-color;
@@ -264,7 +268,8 @@ ul.unstyled, ol.unstyled {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  /*z-index: 1000;*/
+  z-index: 10;
   padding: 10px 20px;
   background: white;
   border-top: 1px solid $border-color;
@@ -872,7 +877,8 @@ a.close-canvas-menu {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 1011;
+  /*z-index: 1011;*/
+  z-index: 10;
   color: #a7b1c2;
 }
 
@@ -918,11 +924,13 @@ a.close-canvas-menu:hover {
 }
 
 .modal-backdrop {
-  z-index: 2040 !important;
+  /*z-index: 2040 !important;*/
+  z-index: 20 !important;
 }
 
 .modal {
-  z-index: 2050 !important;
+  /*z-index: 2050 !important;*/
+  z-index: 21 !important;
 }
 
 .spiner-example {
@@ -1367,6 +1375,7 @@ body.fullscreen-ibox-mode {
 
 .ibox.fullscreen {
   /*z-index: 2030;*/
+  z-index: 20;
   position: fixed;
   top: 0;
   left: 0;

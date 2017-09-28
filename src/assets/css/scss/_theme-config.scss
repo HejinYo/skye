@@ -15,7 +15,8 @@
 .theme-config-box {
   margin-right: -220px;
   position: relative;
-  z-index: 2000;
+  /*z-index: 2000;*/
+  z-index: 20;
   transition-duration: 0.8s;
 }
 

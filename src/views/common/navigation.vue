@@ -16,9 +16,7 @@
                   </span>
             </a>
             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-              <li><a href="profile.html">简介</a></li>
-              <li><a href="contacts.html">联系人</a></li>
-              <li><a href="mailbox.html">邮箱</a></li>
+              <li><a href="#/manage/profile">我的资料</a></li>
               <li class="divider"></li>
               <li><a href="login.html">退出</a></li>
             </ul>
@@ -60,7 +58,7 @@
     mounted: function () {
       this.$nextTick(function () {
         //获取用户菜单
-        axios.get('/api/menu/list')
+        axios.get('/api/resource/usermenu')
           .then(response => {
             this.menuList = response.data.result;
           })

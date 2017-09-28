@@ -47,11 +47,16 @@
           <h1>
             {{$route.name}}
           </h1>
-          <el-breadcrumb separator="/" class="breadcrumb">
-            <el-breadcrumb-item v-for="item in $route.matched" :key="item.path">
+          <!--<el-breadcrumb separator="/" class="breadcrumb">
+            <el-breadcrumb-item v-for="item in $route.matched" :key="item.path" :to="item">
               {{ item.name }}
             </el-breadcrumb-item>
-          </el-breadcrumb>
+          </el-breadcrumb>-->
+          <Breadcrumb class="breadcrumb">
+            <BreadcrumbItem v-for="item in $route.matched" :key="item.path" :href="item">
+              {{ item.name }}
+            </BreadcrumbItem>
+          </Breadcrumb>
         </div>
       </div>
 
@@ -65,6 +70,7 @@
     </div>
     <right-sidebar></right-sidebar>
     <skin-config></skin-config>
+    <BackTop></BackTop>
   </div>
 </template>
 
@@ -95,9 +101,9 @@
     methods: {},
     mounted: function () {
       this.$nextTick(function () {
-        this.$router.replace({
+       /* this.$router.replace({
           path: decodeURIComponent('/manage/main')
-        })
+        })*/
       })
     }
     ,

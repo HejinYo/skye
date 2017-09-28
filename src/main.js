@@ -6,8 +6,12 @@ import router from './tools/router'
 import axios from './tools/axios';
 import store from './tools/vuex'
 import './assets/css/element-theme/index.css'
+/*import 'iview/dist/styles/iview.css';*/
+import './assets/css/iview-theme/index.less';
+import {Table, TableColumn, Loading, Tree} from 'element-ui';
 /*import './assets/css/style.css'*/
 import './directives/inspinia'
+/*import iView from 'iview';*/
 /*import ElementUI from 'element-ui'*/
 /*import 'bootstrap/dist/css/bootstrap.min.css'*/
 /*import 'font-awesome/css/font-awesome.min.css'*/
@@ -18,10 +22,14 @@ import './directives/inspinia'
 /*import Mock from './mock'*/
 /*Mock.bootstrap();*/
 /*Vue.use(ElementUI);*/
-
-
+/*Vue.use(iView);*/
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Tree)
+Vue.use(Loading.directive)
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
+
 /*Vue.use(VeeValidate);*/
 
 /*Validator.updateDictionary({

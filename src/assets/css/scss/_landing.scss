@@ -12,7 +12,8 @@
 .landing-page.pace .pace-progress {
   background: #fff;
   position: fixed;
-  z-index: 2000;
+  /*z-index: 2000;*/
+  z-index: 100;
   top: 0;
   left: 0;
   height: 2px;
@@ -75,7 +76,8 @@ body.landing-page {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 200;
+    /*z-index: 200;*/
+    z-index: 10;
   }
   /* Flip around the padding for proper display in narrow viewports */
   .navbar-wrapper > .container {

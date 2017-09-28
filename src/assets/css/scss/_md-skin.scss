@@ -208,6 +208,7 @@ body.md-skin {
     background: #fff;
     transition-duration: 0.4s;
     /*z-index: 2030;*/
+    z-index: 20;
     border-bottom: none !important;
   }
 
@@ -225,7 +226,8 @@ body.md-skin {
   #right-sidebar {
     box-shadow: $md-shadow-main;
     border: none;
-    z-index: 900;
+    /*z-index: 900;*/
+    z-index: 9;
   }
 
   .white-bg .navbar-fixed-top, .white-bg .navbar-static-top {
