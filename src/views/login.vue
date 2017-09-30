@@ -65,6 +65,7 @@
     },
     methods: {
       doLogin() {
+        this.$Notice.destroy();
         this.$http.post('/api/login', this.account)
           .then(response => {
             let {code, message, result} = response.data;
@@ -76,7 +77,7 @@
             } else {
               this.$Message.info(message);
             }
-          })
+          });
       }
     }
   }

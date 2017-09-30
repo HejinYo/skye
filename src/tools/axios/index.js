@@ -1,9 +1,9 @@
 /*import axios from 'axios';*/
 import router from '../router'
-/*import Message from 'iview/src/components/message';
-import Notice from 'iview/src/components/notice';*/
-import {Message} from 'element-ui';
-import {Notification} from 'element-ui';
+import Message from 'iview/src/components/message';
+import Notice from 'iview/src/components/notice';
+/*import {Message} from 'element-ui';
+import {Notification} from 'element-ui';*/
 
 
 //https://www.kancloud.cn/yunye/axios/234845 详细配置
@@ -35,13 +35,16 @@ axios.interceptors.response.use(function (response) {
   // token 已过期，重定向到登录页面
   let code = response.data.code;
   if (1130 === code) {
-    /* Notice.info({
-       title: '温馨提示',
-       desc: response.data.message
-     });*/
-    Notification.info({
-      message: response.data.message
+    Notice.destroy('authc_error');
+    Notice.info({
+      title: '温馨提示',
+      desc: response.data.message,
+      duration: 0,
+      name: 'authc_error'
     });
+    /*Notification.info({
+      message: response.data.message
+    });*/
     router.replace({
       path: '/login',
       query: {redirect: router.currentRoute.fullPath}
@@ -55,36 +58,36 @@ axios.interceptors.response.use(function (response) {
   if (error.response) {
     let message = error.response.data.message;
     switch (error.response.status) {
-      case 401:
-        Message.warning({message: message});
-        break;
-      case 500:
-        Message.warning({message: message});
-        break;
-      case 504:
-        Message.warning({message: "网络连接超时"});
-        break;
-      default:
-        Message.warning({message: "服务器繁忙，请稍候再试"});
       /* case 401:
-         Message.warning({
-           content: message
-         });
+         Message.warning({message: message});
          break;
        case 500:
-         Message.warning({
-           content: message
-         });
+         Message.warning({message: message});
          break;
        case 504:
-         Message.warning({
-           content: "网络连接超时"
-         });
+         Message.warning({message: "网络连接超时"});
          break;
        default:
-         Message.warning({
-           content: "服务器繁忙，请稍候再试"
-         });*/
+         Message.warning({message: "服务器繁忙，请稍候再试"});*/
+      case 401:
+        Message.warning({
+          content: message
+        });
+        break;
+      case 500:
+        Message.warning({
+          content: message
+        });
+        break;
+      case 504:
+        Message.warning({
+          content: "网络连接超时"
+        });
+        break;
+      default:
+        Message.warning({
+          content: "服务器繁忙，请稍候再试"
+        });
     }
   }
   return Promise.reject(error)
