@@ -31,19 +31,19 @@
             </ol>
             <div class="carousel-inner">
               <div class="item">
-                <img alt="image" class="img-responsive" src="../assets/img/p_big1.jpg">
+                <img alt="image" class="img-responsive" src="http://ow1prafcd.bkt.clouddn.com/big1.jpg">
                 <div class="carousel-caption">
                   <p>This is simple caption 1</p>
                 </div>
               </div>
               <div class="item">
-                <img alt="image" class="img-responsive" src="../assets/img/p_big3.jpg">
+                <img alt="image" class="img-responsive" src="http://ow1prafcd.bkt.clouddn.com/big3.jpg">
                 <div class="carousel-caption">
                   <p>This is simple caption 2</p>
                 </div>
               </div>
               <div class="item active">
-                <img alt="image" class="img-responsive" src="../assets/img/p_big2.jpg">
+                <img alt="image" class="img-responsive" src="http://ow1prafcd.bkt.clouddn.com/big2.jpg">
                 <div class="carousel-caption">
                   <p>This is simple caption 3</p>
                 </div>

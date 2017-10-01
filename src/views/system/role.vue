@@ -75,7 +75,7 @@
               <el-table-column prop="roleCode" label="角色" align="center" width="120"></el-table-column>
               <!--<el-table-column prop="resName" label="资源名称" sortable="custom" width="150"></el-table-column>-->
               <!--<el-table-column prop="resCode" label="资源编码" sortable="custom" width="150"></el-table-column>-->
-              <el-table-column prop="permName" label="资源权限" sortable="custom" min-width="150">
+              <el-table-column prop="permName" label="资源权限" sortable="custom" min-width="200">
                 <template scope="scope">
                   {{scope.row.resName}} ({{scope.row.permName}})
                 </template>

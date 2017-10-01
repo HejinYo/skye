@@ -1,13 +1,5 @@
 <template>
   <div>
-    <!-- <div class="row">
-       <div class="col-lg-6">
-         <div class="ibox float-e-margins">
-           <div class="ibox-content">
-           </div>
-         </div>
-       </div>
-     </div>-->
 
     <div class="row">
       <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
@@ -76,7 +68,6 @@
     name: '用户资料',
     data() {
       return {
-
         dialogImageUrl: '',
         dialogVisible: false,
         userToken: {'Authorization': sessionStorage.getItem('userToken')},
